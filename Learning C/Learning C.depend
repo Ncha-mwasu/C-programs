@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1684089363 source:c:\users\hp\desktop\alx c programs\learning c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1684089543 source:c:\users\hp\desktop\alx c programs\learning c\struct.c
+
