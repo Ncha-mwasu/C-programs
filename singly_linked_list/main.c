@@ -1,30 +1,29 @@
-// Online C compiler to run C program online
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "main.h"
 
-struct Person {
-char name[6];
-char school[10];
-int age;
-}person1, person2;
 
-int main () {
-  strcpy(person1.name, "Nchas");
-  person1.age = 19;
-  strcpy(person1.school, "FUT Minna");
+int main() {
+    list *head;
+    list *first = NULL;
+    list *second = NULL;
 
-  strcpy(person2.name, "Palm");
-  person2.age = 19;
-  strcpy(person2.school, "Unimaid");
+    first = malloc(sizeof(list));
+    second = malloc(sizeof(list));
+    first->data = 30;
+    second->data = 20;
 
-  printf("Person1.Name - %s\n", person1.name);
-  printf("Person1.School - %s\n", person1.school);
-  printf("Person1.age - %d\n", person1.age);
+    head = first;
+    first->next = second;
+    second->next = NULL;
+    add_node(&head, 20);
+    add_node(&head, 10);
+    add_node_end(&head, 34);
+    add_node_at(&head, 90, 0);
+    add_after(head->next->next, 100);
+    
 
-  printf("\n");
-  printf("Person2.Name - %s\n", person2.name);
-  printf("Person2.School - %s\n", person2.school);
-  printf("Person2.age - %d\n", person2.age);
-  return 0;
+    print_list(head);
+    printf("Length of linked list - %d", list_len(head));
+
+    return 0;
+
 }
