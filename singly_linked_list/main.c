@@ -25,5 +25,4 @@ int main(void) {
     printf("Length of linked list - %d", list_len(head));
 
     return 0;
-
 }
