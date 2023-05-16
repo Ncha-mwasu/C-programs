@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-int main() {
+int main(void) {
     list *head;
     list *first = NULL;
     list *second = NULL;
